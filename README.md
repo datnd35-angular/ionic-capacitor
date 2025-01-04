@@ -69,6 +69,12 @@ Ví dụ, nếu muốn dùng tính năng rung khi user hoàn thành một task, 
 
 ![image](https://github.com/user-attachments/assets/e66028f1-89b8-4c59-a1f1-059469d99653)
 
+App này đã được code đầy đủ các chức năng cơ bản, giờ mình thử tích hợp Capacitor để biến nó thành một Android app có thể sử dụng các tính năng "native" như sau:
+
+- Khi user thêm, sửa hay xóa một item, sẽ có một thông báo toast hiện ra - dùng [Toast plugin](https://capacitorjs.com/docs/apis/toast)
+- Khi user tick hoàn thành một item, thiết bị của họ sẽ rung lên - dùng [Haptics plugin](https://capacitorjs.com/docs/apis/haptics)
+- Chỉ với 3 bước như trên trang chủ, chúng ta cùng bắt tay thực hiện.
+
 Dưới đây là hướng dẫn nhanh để biến một web app thành Android app:
 
 ### Bước 1: Cài đặt CLI và core package
@@ -77,6 +83,9 @@ npm install @capacitor/cli @capacitor/core
 npx cap init
 ```
 CLI sẽ yêu cầu bạn nhập thông tin như tên app, package ID và thư mục chứa file `index.html` sau khi build.
+
+
+![image](https://github.com/user-attachments/assets/21e38758-1794-485b-baff-4b6274aabcc6)
 
 ### Bước 2: Cài đặt platform package
 ```bash
@@ -106,7 +115,16 @@ Ví dụ:
   ```
 
 ### Bước 4: Đóng gói app bằng Android Studio
-Dùng lệnh `npx cap open android` để mở project bằng Android Studio. Sau đó build hoặc chạy trực tiếp trên simulator hay thiết bị thật.
+Ở bước này có thể sẽ có bạn thắc mắc: sao phải dùng `Android Studio`? tưởng `Capacitor` hô biến web app thành mobile app luôn mà không cần `IDE` đặc thù của nền tảng/hệ điều hành đó chứ? Lý do là vì Capacitor không hoạt động như vậy. Như đã nói trên, Capacitor chỉ đóng vai trò là cầu nối giữa `codebase web` của bạn với môi trường `"native"` của hệ điều hành, đơn giản hóa các bước trong quy trình phát triển `mobile app`, tuy nhiên, việc đóng gói code và build thành một mobile app vẫn phải do các IDE là `Android Studio` (đối với Android) hay `Xcode` (đối với iOS) đảm nhận. Nhưng bước này cũng không quá phức tạp nên các bạn không phải lo lắng.
+
+Để cài đặt `Android Studio`, các bạn cứ lên trang chủ tải về rồi tiến hành cài đặt bình thường. Sau khi cài đặt, các bạn có thể mở Android Studio cùng với project của mình bằng lệnh `npx cap open android`. Đợi tí để gradle tự động cài đặt các `package` cần thiết cho app. Cuối cùng, các bạn có thể chạy app trực tiếp trên `simulator` hoặc điện thoại của mình để trải nghiệm, hay build source thành file `apk` hoặc `bundle` để deploy lên store.
+
+
+![image](https://github.com/user-attachments/assets/6a44a4be-2f70-48cc-8959-b998842f2cf6)
+
+Trường hợp của mình, sau khi chạy app trên điện thoại, mình nhập một item mới thì một Toast hiện kết quả như code mình đã sửa:
+
+![image](https://github.com/user-attachments/assets/e12cd707-eaec-4e6b-9b7f-d5fa7eda4547)
 
 ## Tự tạo một plugin
 Nếu cần sử dụng một tính năng native chưa có plugin, bạn có thể tự tạo plugin cho riêng mình.
