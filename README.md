@@ -40,11 +40,7 @@ Capacitor là một công cụ cho phép dev xây dựng ứng dụng di động
 
 ![image](https://github.com/user-attachments/assets/0a7415bd-ff26-44cf-8df4-e29c86e47aa2)
 
-
-
-![image](https://github.com/user-attachments/assets/be9ab38f-43a6-4951-9cb1-ace010aa2e4a)
-
-Tổng quan Capacitor:
+**Tổng quan Capacitor:**
 
 - **Capacitor build:** Đóng gói ứng dụng web (js hoặc framework như Angular, React, Nexjs,..), sau đó sẽ tạo ra một ứng dụng như **Native APP** (nó có thể chạy trên thiết bị Android/iOS) và capacitor giúp bọc ứng dụng Web trong một vỏ gốc `Native shell`.
   
@@ -57,7 +53,10 @@ Tổng quan Capacitor:
 - **IOS:** `Capacitor` dùng `Xcode` để đóng gói thành một ứng dụng có đuôi `.ipa` (gồm 2 phần Web app và Native app).
   
 - **Android:** `Capacitor` dùng `Android studio` để đóng gói thành một ứng dụng có đuôi `.apk` (gồm 2 phần Web app và Native app).
-  
+
+![image](https://github.com/user-attachments/assets/be9ab38f-43a6-4951-9cb1-ace010aa2e4a)
+
+
 ### Hệ sinh thái plugin
 Capacitor có sẵn nhiều plugin giúp gọi các tính năng native chỉ bằng API đơn giản:
 - **Plugin chính thống**: Được phát triển bởi team core của Capacitor ([Xem tại đây](https://capacitorjs.com/docs/apis)).
