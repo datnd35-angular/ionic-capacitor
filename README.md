@@ -182,3 +182,4 @@ npm run build
 ## Kết luận
 Capacitor giúp dev web dễ dàng bước chân vào thế giới mobile app mà không cần học thêm quá nhiều công nghệ mới. Nếu bạn đang tìm kiếm một giải pháp nhanh chóng để xây dựng ứng dụng di động từ web app hiện có, Capacitor là một lựa chọn rất đáng cân nhắc.
 
+[Tham khảo](https://viblo.asia/p/capacitor-xam-luoc-the-gioi-mobile-chi-voi-html-css-js-gAm5y0xLldb)
